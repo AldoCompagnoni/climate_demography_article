@@ -230,6 +230,9 @@ temp_p <- airt_df %>%
   theme( legend.position = 'bottom' ) +
   labs( y = 'Mean daily temperature (°C)' )
 
+# create "results" directory if it doesn't exist yet
+if( !dir.exists('results') ) dir.create('results')
+
 ggsave( 'results/temperature_means.tiff',
         temp_p, dpi = 600,
         width = 6.3, height = 4, compression = 'lzw' )
