@@ -1,0 +1,22 @@
+Variable,Meaning
+xllcorner,The longitude (X coordinate) of the lower-left corner of the MODIS tile you’re extracting from.
+yllcorner,The latitude (Y coordinate) of the lower-left corner of the MODIS tile.
+cellsize,The spatial resolution of each pixel (in meters).
+nrows,Number of rows in the MODIS tile (how many pixels in Y-direction).
+ncols,Number of columns in the MODIS tile (how many pixels in X-direction).
+band,"MODIS band reported by the data (""Greenup.Num_Modes_01"")."
+units,"The measurement units for the band - in this case, days since 1-1-1970."
+scale,Scale factor to apply to raw values (some MODIS products require multiplication or division to get real-world units).
+latitude,Latitude of the pixel the data refers to
+longitude,Longitude of the pixel the data refers to
+site,The name of the site this data refers to
+product,"The MODIS product name (here ""MCD12Q2"", which is the Land Cover Dynamics/Phenology product)."
+start,Start date of the query that produced the data
+end,End date of the query that produced the data
+complete,TRUE/FALSE indicating whether the MODIS queary was completed successfully.
+modis_date,MODIS date: A followed by the year (YYYY) followed by the day of the year (DDD).
+calendar_date,The same date converted to a human-readable calendar date (YYYY-MM-DD).
+tile,An alphanumeric identifier showing which MODIS tile covers the requested coordinates.
+proc_date,The date when NASA processed the MODIS data.
+pixel,Pixel ID within the MODIS tile (this is usually just 1 because you requested a single point).
+value,"The extracted value for the band you requested. Since this value refers to a day, this is the number of days elapsed since Jannuary 1st 1970."

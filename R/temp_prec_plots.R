@@ -236,3 +236,20 @@ if( !dir.exists('results') ) dir.create('results')
 ggsave( 'results/temperature_means.tiff',
         temp_p, dpi = 600,
         width = 6.3, height = 4, compression = 'lzw' )
+
+
+# Precipitation plot -----------------------------------------------------------
+
+# temperature plot
+prec_p <- clim_df %>% 
+  subset( Date < ymd('2022-06-01') ) %>% 
+  ggplot() +
+  geom_line( aes(Date, total_precip_mm),
+             alpha = 1) +
+  theme_few() +
+  labs( y = 'Daily Precipitation (mm)' )
+
+# save the daily precipitation plot
+ggsave( paste0('results/precip.tiff'),
+        prec_p, dpi = 600,
+        width = 6.3, height = 4, compression = 'lzw' )
